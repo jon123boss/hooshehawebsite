@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoosheha Summer Camp 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #000;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      height: 200vh;
+    }
+
+    .starry-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: url('https://www.solarsystemscope.com/textures/download/8k_stars_milky_way.jpg') repeat;
+      background-size: cover;
+      z-index: -1;
+      animation: starsMove 200s infinite linear;
+      filter: hue-rotate(240deg);
+    }
+
+    @keyframes starsMove {
+      0% { background-position: 0 0; }
+      100% { background-position: -200px -200px; }
+    }
+
+    header {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    nav {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #2575fc;
+      border-bottom: 2px solid #2575fc;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1rem, 3vw, 3rem);
+      color: black;
+      background-color: white;
+      padding: 0rem clamp(1rem, 2vw, 3rem);
+      border-radius: clamp(0.4rem, 0.75vw, 1rem);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h2:hover {
+      background-color: black;
+      color: white;
+    }
+
+    p {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+      padding: 0rem clamp(1rem, 2vw, 3rem);
+    }
+
+    .program-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .highlight-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .details-section {
+      background: white;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .cost-box {
+      background: linear-gradient(45deg, #3498db, #2c3e50);
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .requirements-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .requirements-list li {
+      font-family: 'Space Mono', monospace;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      background: #f8f9fa;
+      border-left: 3px solid #3498db;
+      font-size: 1.2rem;
+    }
+
+    .signup-button {
+      display: inline-block;
+      background: #27ae60;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin: 2rem 0;
+      font-size: 1rem;
+    }
+
+    .signup-button:hover {
+      background: #219a52;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    footer p {
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      margin: 0;
+      color: #fff;
+      position: center;
+      transition: opacity 0.5s;
+      transition: all 0.1s ease;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1:hover {
+      color: rgba(0, 255, 255, 0.9);
+      font-size: 4.5em;
+    }
+
+    .hero h1 span {
+      display: inline-block;
+      animation: wave 2s ease-in-out infinite;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(20deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(20deg); }
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      animation: bounce 2s infinite;
+      z-index: 1001;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-40px); }
+      60% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeText {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .popping {
+      animation: pop 1s infinite;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.2);
+      }
+      75% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .about-me-box {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px;
+      border-width: 5px;
+      border-style: solid;
+      border-image: linear-gradient(45deg, #6a11cb, #2575fc) 1;
+      border-radius: 15px;
+      margin: 10px 0;
+      background-color: #fff;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .about-me-box.in-view {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .about-me-box:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    #hero-particle-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 100px;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .hero .particle {
+      position: absolute;
+      background-color: rgba(0, 150, 255, 0.3);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: particleAnimation 3s forwards;
+      transform-origin: center;
+    }
+
+    @keyframes particleAnimation {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .program-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%; /* Make the image take the full width of the container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove bottom space under images */
+    }
+
+    .gallery-item p {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      width: 100%;
+      padding: 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    .teaching-structure {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .step-card {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #2575fc;
+    }
+
+    .timetable-button {
+      display: inline-block;
+      background: #e67e22;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 1rem 0;
+      transition: background 0.3s ease;
+    }
+
+    .timetable-button:hover {
+      background: #d35400;
+    }
+
+    @media (max-width: 768px) {
+      .image-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="starry-background"></div>
+
+<div class="hero">
+  <div>
+    <h1 class="hero-text">Hoosheha Summer Camp 2025</h1>
+    <p class="popping">Scroll down 😊</p>
+    <div class="particle-container" id="hero-particle-container"></div>
+    <div class="scroll-down">↓</div>
+  </div>
+</div>
+
+<header>
+  <h1>Hoosheha Summer Camp 2025</h1>
+  <p>July 30 - August 4th • Hebei (Near Beijing), China</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#details">Details</a>
+  <a href="#signup">Sign Up</a>
+</nav>
+
+<main>
+  <section id="about">
+    <div class="details-section">
+      <h2 class="unscramble-text">Transformative Educational Experience</h2>
+      <p>Hoosheha Summer Camp combines education, cultural exchange, and personal growth in rural China. Join us to teach English and science while immersing yourself in local culture and making a lasting impact.</p>
+
+      <div class="program-highlights">
+        <div class="highlight-card">
+          <h3>🌟 Cultural Immersion</h3>
+          <p>Live and work in rural Hebei (Near Beijing) province, experiencing authentic Chinese village life</p>
+        </div>
+        <div class="highlight-card">
+          <h3>📚 Teaching Experience</h3>
+          <p>Develop leadership skills by teaching English and science to local students</p>
+        </div>
+        <div class="highlight-card">
+          <h3>🌱 Personal Growth</h3>
+          <p>Challenge yourself in a supportive environment while serving the community</p>
+        </div>
+      </div>
+      <h4>Last Year's Video</h4>
+      <div class="video-container">
+        <video controls poster="placeholder.jpg">
+          <source src="camp-highlights.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="program-highlights">
+      <!-- Existing cards remain -->
+      <div class="highlight-card">
+        <h3>🔥 Marshmallow Night</h3>
+        <p>Celebrate final teaching day with bonfire and marshmallow roasting</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🏕️ Camping Adventure</h3>
+        <p>Free equipment provided for final night's outdoor experience</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="image-gallery">
+    <div class="gallery-item">
+      <img src="firstpic.jpeg" alt="Our Campus Facilities">
+      <p>Our Campus Facilities</p>
+    </div>
+    <div class="gallery-item">
+      <img src="secondpic.jpg" alt="Student Activities">
+      <p>Student Activities</p>
+    </div>
+    <div class="gallery-item">
+      <img src="thirdpic.jpg" alt="Beautiful Natural Surroundings">
+      <p>Beautiful Natural Surroundings</p>
+    </div>
+  </section>
+
+
+  <section id="details">
+    <div class="details-section">
+      <h2 class="unscramble-text">Program Details</h2>
+
+      <div class="cost-box">
+        <h3>Program Costs</h3>
+        <p>Full Package: $6,390 (includes flights)</p>
+        <p>Local Package: $3,390 (excludes flights)</p>
+        <p>Non-refundable deposit: $1,500 due upon registration</p>
+      </div>
+
+      <h3>Key Requirements</h3>
+      <ul class="requirements-list">
+        <li>Current Y10-Y12 students</li>
+        <li>Basic Chinese language skills required</li>
+        <li>Valid passport with 6+ months validity</li>
+        <li>Ability to work in team environments</li>
+      </ul>
+
+      <h3>Travel & Accommodation</h3>
+      <p>✈️ Group flights with airport transfers included<br>
+        🏨 4-star hotel accommodation with modern amenities</p>
+
+      <h3>Essential Information</h3>
+      <div class="highlight-card">
+        <h4>📝 Visa Requirements</h4>
+        <p>Families must ensure proper visa documentation. Allow 8-12 weeks for processing.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>⚖️ Behavior Policy</h4>
+        <p>Strict adherence to safety protocols. Serious misconduct may result in dismissal.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>🛡️ Comprehensive Insurance</h4>
+        <p>Full AXA travel insurance included for all participants.</p>
+      </div>
+    </div>
+    <h2 class="unscramble-text">Participant Responsibilities</h2>
+    <ul class="requirements-list">
+      <li>Create lesson slides for 2 classes</li>
+      <li>Develop interactive educational games</li>
+      <li>Supervise students throughout activities</li>
+      <li>Collaborate with teaching teams daily</li>
+    </ul>
+
+    <!-- Add teaching structure -->
+    <h2 class="unscramble-text">Daily Teaching Format</h2>
+    <div class="teaching-structure">
+      <div class="step-card">
+        <h4>🌞 Morning Sessions</h4>
+        <p>2 head teachers conduct lessons while 2 assist students</p>
+      </div>
+      <div class="step-card">
+        <h4>🌆 Afternoon Sessions</h4>
+        <p>Other 2 head teachers lead lessons while morning team assists students</p>
+      </div>
+      <div class="step-card">
+        <h4>🌙 Evening Prep</h4>
+        <p>All teachers review progress and prepare next day's materials</p>
+      </div>
+    </div>
+
+    <!-- Add timetable link -->
+    <a href="https://docs.google.com/spreadsheets/d/1gC2DDWv8eVvCn8ufwgwhCfbXDo2WlBECx_0mIQfmtv0/edit?usp=sharing"
+       class="timetable-button"
+       target="_blank">
+      View Full Timetable
+    </a>
+    </div>
+  </section>
+
+  <section id="signup">
+    <div class="details-section text-center">
+      <h2 class="unscramble-text">Ready for Adventure?</h2>
+      <p>Limited to 10 students - Apply early to secure your spot!</p>
+      <a href="https://forms.gle/5BUY6zGtxD5Hddy18" class="signup-button">Apply Now</a>
+
+      <h3>Contact Our Team</h3>
+      <p>Bob: 6638 6887<br>
+        Jonathan: 6700 3585</p>
+
+      <p style="color: #e74c3c; font-weight: bold;">Application Deadline: July 1, 2025</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Hoosheha Summer Education Program • All rights reserved</p>
+  <p>Educational partnership with Peking University Graduates</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const particleContainer = document.getElementById('hero-particle-container');
+
+    function createParticle(x, y) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+
+      const containerRect = particleContainer.getBoundingClientRect();
+      const particleX = x - containerRect.left;
+      const particleY = y - containerRect.top;
+
+      particle.style.left = `${particleX-15}px`;
+      particle.style.top = `${particleY-15}px`;
+      particleContainer.appendChild(particle);
+
+      particle.addEventListener('animationend', () => {
+        particle.remove();
+      });
+    }
+
+    const heroSection = document.querySelector('.hero');
+    heroSection.addEventListener('mousemove', function(e) {
+      const mouseX = e.pageX;
+      const mouseY = e.pageY;
+
+      createParticle(mouseX, mouseY);
+    });
+
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const deltaX = x - centerX;
+      const deltaY = y - centerY;
+      const angleX = deltaY / -40;
+      const angleY = -deltaX / -40;
+
+      const heroText = document.querySelector('.hero h1');
+      heroText.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    });
+
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      document.querySelector('.starry-background').style.transform = `translate(-${scrollPosition / 5}px, -${scrollPosition / 5}px)`;
+
+      const heroText = document.querySelector('.hero-text');
+
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const maxScroll = 300;
+        const opacityValue = Math.max(1 - scrollPosition / maxScroll, 0);
+
+        heroText.style.opacity = opacityValue;
+      });
+
+      const aboutMeBox = document.querySelector('.about-me-box');
+      const aboutRect = aboutMeBox.getBoundingClientRect();
+      if (aboutRect.top < window.innerHeight && aboutRect.bottom >= 0) {
+        aboutMeBox.classList.add('in-view');
+      } else {
+        aboutMeBox.classList.remove('in-view');
+      }
+    });
+  });
+  const unscrambleTexts = document.querySelectorAll('.unscramble-text');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  unscrambleTexts.forEach((unscrambleText) => {
+    const originalText = unscrambleText.innerText;
+    let interval = null;
+
+    const scramble = () => {
+      let iteration = 0;
+
+      clearInterval(interval);
+
+      interval = setInterval(() => {
+        unscrambleText.innerText = unscrambleText.innerText
+                .split('')
+                .map((letter, index) => {
+                  if (index < iteration) {
+                    return originalText[index];
+                  }
+                  return letters[Math.floor(Math.random() * 26)];
+                })
+                .join('');
+
+        if (iteration >= originalText.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 3;
+      }, 10);
+    };
+
+    const resetText = () => {
+      clearInterval(interval);
+      unscrambleText.innerText = originalText;
+    };
+
+    unscrambleText.addEventListener('mouseover', scramble);
+    unscrambleText.addEventListener('mouseleave', resetText);
+  });
+</script>
+</body>
+</html>
